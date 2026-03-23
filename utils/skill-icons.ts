@@ -1,25 +1,4 @@
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiMongodb,
-  SiMysql,
-  SiFirebase,
-  SiGit,
-  SiFigma,
-  SiBootstrap,
-  SiMui,
-  SiCanva,
-  SiAdobeillustrator,
-  SiAdobephotoshop,
-  SiFreelancer,
-  SiAwslambda,
-} from "react-icons/si";
+import * as SiIcons from "react-icons/si";
 import { IconType } from "react-icons";
 
 export const getSkillIcon = (skill: string): IconType => {
@@ -27,55 +6,55 @@ export const getSkillIcon = (skill: string): IconType => {
 
   switch (skillLower) {
     case "html":
-      return SiHtml5;
+      return SiIcons.SiHtml5;
     case "css":
-      return SiCss3;
+      return SiIcons.SiCss3;
     case "javascript":
-      return SiJavascript;
+      return SiIcons.SiJavascript;
     case "js":
-      return SiJavascript;
+      return SiIcons.SiJavascript;
     case "typescript":
-      return SiTypescript;
+      return SiIcons.SiTypescript;
     case "ts":
-      return SiTypescript;
+      return SiIcons.SiTypescript;
     case "react":
-      return SiReact;
+      return SiIcons.SiReact;
     case "next js":
     case "nextjs":
     case "next.js":
-      return SiNextdotjs;
+      return SiIcons.SiNextdotjs;
     case "tailwind":
     case "tailwindcss":
-      return SiTailwindcss;
+      return SiIcons.SiTailwindcss;
     case "node js":
     case "nodejs":
     case "node.js":
-      return SiNodedotjs;
+      return SiIcons.SiNodedotjs;
     case "mongodb":
-      return SiMongodb;
+      return SiIcons.SiMongodb;
     case "mysql":
-      return SiMysql;
+      return SiIcons.SiMysql;
     case "aws":
-      return SiAwslambda;
+      return SiIcons.SiAwslambda;
     case "firebase":
-      return SiFirebase;
+      return SiIcons.SiFirebase;
     case "git":
-      return SiGit;
+      return SiIcons.SiGit;
     case "figma":
-      return SiFigma;
+      return SiIcons.SiFigma;
     case "bootstrap":
-      return SiBootstrap;
+      return SiIcons.SiBootstrap;
     case "materialui":
     case "mui":
-      return SiMui;
+      return SiIcons.SiMui;
     case "canva":
-      return SiCanva;
+      return SiIcons.SiCanva;
     case "illustrator":
-      return SiAdobeillustrator;
+      return SiIcons.SiAdobeillustrator;
     case "photoshop":
-      return SiAdobephotoshop;
+      return SiIcons.SiAdobephotoshop;
     default:
-      return SiFreelancer; // Fallback icon
+      return SiIcons.SiFreelancer; // Fallback icon
   }
 };
 
