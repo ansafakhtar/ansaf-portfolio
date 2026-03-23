@@ -1,61 +1,56 @@
-import * as SiIcons from "react-icons/si";
-import { IconType } from "react-icons";
+import dynamic from "next/dynamic";
+import { ComponentType } from "react";
+import type { IconBaseProps } from "react-icons";
 
-export const getSkillIcon = (skill: string): IconType => {
-  const skillLower = skill.toLowerCase();
+// Map skill keys to react-icons names
+const ICON_NAME_MAP: Record<string, string> = {
+  html: "SiHtml5",
+  css: "SiCss3",
+  javascript: "SiJavascript",
+  js: "SiJavascript",
+  typescript: "SiTypescript",
+  ts: "SiTypescript",
+  react: "SiReact",
+  "next js": "SiNextdotjs",
+  nextjs: "SiNextdotjs",
+  "next.js": "SiNextdotjs",
+  tailwind: "SiTailwindcss",
+  tailwindcss: "SiTailwindcss",
+  "node js": "SiNodedotjs",
+  nodejs: "SiNodedotjs",
+  "node.js": "SiNodedotjs",
+  mongodb: "SiMongodb",
+  mysql: "SiMysql",
+  aws: "SiAwslambda",
+  firebase: "SiFirebase",
+  git: "SiGit",
+  figma: "SiFigma",
+  bootstrap: "SiBootstrap",
+  materialui: "SiMui",
+  mui: "SiMui",
+  canva: "SiCanva",
+  illustrator: "SiAdobeillustrator",
+  photoshop: "SiAdobephotoshop",
+  // fallback key will be handled separately
+};
 
-  switch (skillLower) {
-    case "html":
-      return SiIcons.SiHtml5;
-    case "css":
-      return SiIcons.SiCss3;
-    case "javascript":
-      return SiIcons.SiJavascript;
-    case "js":
-      return SiIcons.SiJavascript;
-    case "typescript":
-      return SiIcons.SiTypescript;
-    case "ts":
-      return SiIcons.SiTypescript;
-    case "react":
-      return SiIcons.SiReact;
-    case "next js":
-    case "nextjs":
-    case "next.js":
-      return SiIcons.SiNextdotjs;
-    case "tailwind":
-    case "tailwindcss":
-      return SiIcons.SiTailwindcss;
-    case "node js":
-    case "nodejs":
-    case "node.js":
-      return SiIcons.SiNodedotjs;
-    case "mongodb":
-      return SiIcons.SiMongodb;
-    case "mysql":
-      return SiIcons.SiMysql;
-    case "aws":
-      return SiIcons.SiAwslambda;
-    case "firebase":
-      return SiIcons.SiFirebase;
-    case "git":
-      return SiIcons.SiGit;
-    case "figma":
-      return SiIcons.SiFigma;
-    case "bootstrap":
-      return SiIcons.SiBootstrap;
-    case "materialui":
-    case "mui":
-      return SiIcons.SiMui;
-    case "canva":
-      return SiIcons.SiCanva;
-    case "illustrator":
-      return SiIcons.SiAdobeillustrator;
-    case "photoshop":
-      return SiIcons.SiAdobephotoshop;
-    default:
-      return SiIcons.SiFreelancer; // Fallback icon
-  }
+// Return a dynamically loaded icon component. This avoids static named imports
+// that some bundlers (Netlify) optimize in a way that breaks builds.
+export const getSkillIcon = (skill: string): ComponentType<IconBaseProps> => {
+  const key = skill.toLowerCase();
+  const iconName = ICON_NAME_MAP[key] || "SiFreelancer";
+
+  const DynamicIcon = dynamic(() =>
+    import("react-icons/si").then((mod) => {
+      // cast module to a lookup of icon components
+      const m = mod as unknown as Record<string, ComponentType<IconBaseProps>>;
+      const IconComp = m[iconName] || m.SiFreelancer;
+      return { default: IconComp };
+    }),
+    { ssr: false },
+  );
+
+  return DynamicIcon as ComponentType<IconBaseProps>;
 };
 
 export const getSkillColor = (skill: string): string => {
@@ -84,7 +79,7 @@ export const getSkillColor = (skill: string): string => {
       return "#7f1d1d"; // Red-900
     case "mysql":
       return "#991b1b"; // Red-800
-      case "aws":
+    case "aws":
       return "#ef4444"; // Red-500
     case "firebase":
       return "#ef4444"; // Red-500
