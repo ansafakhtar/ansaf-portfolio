@@ -1,0 +1,20 @@
+export const personalData = {
+  name: "Ansaf Akhtar",
+  profile: "/picture3.jpg",
+  greeting: ["Hello!", "Kia Ora!", "Bonjour!", "Hola!", "Ciao!"],
+  designationAlternateWords: ["Developer.", "Engineer.", "Innovator.", "Designer.", "Architect."],
+  description:
+    "Senior Full-Stack Developer specializing in TypeScript, React, Next.js, Node.js and AWS cloud infrastructure. I design and architect scalable web applications with clean, modular systems, high-performance frontends, and secure, reliable backend APIs. I focus on building maintainable, production-grade solutions that align technical excellence with business goals.",
+  email: "ansafakhtar239@gmail.com",
+  phone: "+917860222664",
+  address: "Lucknow, India",
+  github: "https://github.com/ansafakhtar",
+  facebook: "https://www.facebook.com",
+  Instagram: "https://www.instagram.com/unsafe_bot",
+  linkedIn: "https://www.linkedin.com/in/ansaf-akhtar/",
+  twitter: "https://x.com",
+  stackOverflow: "https://stackoverflow.com",
+  devUsername: "AK-GHOST",
+  leetcode: "https://leetcode.com",
+  resume: "",
+};
