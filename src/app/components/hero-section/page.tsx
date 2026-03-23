@@ -137,6 +137,27 @@ const HeroSection = () => {
     { scope: containerRef },
   );
 
+      const onButtonClick = async () => {
+        try {
+          const res = await fetch(personalData.resume);
+          if (!res.ok) throw new Error('Failed to fetch resume');
+          const blob = await res.blob();
+          const fileURL = window.URL.createObjectURL(blob);
+          const alink = document.createElement('a');
+          alink.href = fileURL;
+          // try to infer filename from URL, fallback to resume.pdf
+          const parts = personalData.resume?.split('/') || [];
+          alink.download = parts[parts.length - 1] || 'Ansaf-Resume.pdf';
+          document.body.appendChild(alink);
+          alink.click();
+          alink.remove();
+          window.URL.revokeObjectURL(fileURL);
+        } catch (err) {
+          // optional: log or show some UI feedback
+          console.error('Resume download failed', err);
+        }
+      };
+
   return (
     <section
       ref={containerRef}
@@ -226,13 +247,13 @@ const HeroSection = () => {
                 </span>
               </Link>
 
-              <Link
-                href={personalData.resume}
-                target="_blank"
+              <button
+                type="button"
+                onClick={onButtonClick}
                 className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
               >
                 Get Resume <MdDownload className="group-hover:translate-y-1 transition-transform" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
