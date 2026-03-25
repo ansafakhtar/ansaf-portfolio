@@ -20,10 +20,10 @@ body {
 body {
   background-image: radial-gradient(
     circle at 50% -20%,
-    /* #1e1c95 0%,
-    #070707 80% */
-    #450a0a 0%,
-    #050505 80%
+    #1e1c95 0%,
+    #070707 80%
+    /* #450a0a 0%,
+    #050505 80% */
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,7 +131,7 @@ body {
 }
 .name {
   transition: all 0.3s ease;
-  text-shadow: 0 0 5px rgba(239, 68, 68, 0.5);
+  text-shadow: 0 0 5px rgb(43, 127, 255, 0.5);
 }
 
 .custom-animated-button {
@@ -201,9 +201,9 @@ body {
 }
 
 .btn-emerald {
-  --btn-border: #dc2626;
-  --btn-bg-hover: #ef4444;
-  --btn-shadow: rgba(239, 68, 68, 0.5);
+  --btn-border: #155dfc;
+  --btn-bg-hover: #2b7fff;
+  --btn-shadow: rgb(43, 127, 255, 0.5);
   --btn-glow: #fff;
 }
 .description {

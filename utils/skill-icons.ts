@@ -57,42 +57,42 @@ export const getSkillColor = (skill: string): string => {
   const skillLower = skill.toLowerCase();
   switch (skillLower) {
     case "html":
-      return "#ef4444"; // Red-500
+      return "#2b7fff"; // Red-500
     case "css":
-      return "#dc2626"; // Red-600
+      return "#155dfc"; // Red-600
     case "javascript":
-      return "#b91c1c"; // Red-700
+      return "#1447e6"; // Red-700
     case "typescript":
-      return "#ef4444"; // Red-500
+      return "#2b7fff"; // Red-500
     case "react":
-      return "#dc2626"; // Red-600
+      return "#155dfc"; // Red-600
     case "next js":
     case "nextjs":
     case "next.js":
-      return "#ef4444"; // Keep white for contrast
+      return "#2b7fff"; // Keep white for contrast
     case "tailwind":
-      return "#991b1b"; // Red-800
+      return "#193cb8"; // Red-800
     case "node js":
     case "nodejs":
-      return "#b91c1c"; // Red-700
+      return "#1447e6"; // Red-700
     case "mongodb":
-      return "#7f1d1d"; // Red-900
+      return "#1c398e"; // Red-900
     case "mysql":
-      return "#991b1b"; // Red-800
+      return "#193cb8"; // Red-800
     case "aws":
-      return "#ef4444"; // Red-500
+      return "#2b7fff"; // Red-500
     case "firebase":
-      return "#ef4444"; // Red-500
+      return "#2b7fff"; // Red-500
     case "git":
-      return "#dc2626"; // Red-600
+      return "#155dfc"; // Red-600
     case "figma":
-      return "#b91c1c"; // Red-700
+      return "#1447e6"; // Red-700
     case "bootstrap":
-      return "#991b1b"; // Red-800
+      return "#193cb8"; // Red-800
     case "materialui":
     case "mui":
-      return "#ef4444"; // Red-500
+      return "#2b7fff"; // Red-500
     default:
-      return "#ef4444"; // Default Red
+      return "#2b7fff"; // Default Red
   }
 };

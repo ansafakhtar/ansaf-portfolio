@@ -164,29 +164,29 @@ const HeroSection = () => {
       className="relative min-h-[90vh] flex flex-col items-center justify-center py-12 lg:py-24 overflow-hidden"
     >
       {/* Background Ambient Glows */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-red-600/10 blur-[120px] rounded-full animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-900/10 blur-[150px] rounded-full animate-pulse delay-700" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600/10 blur-[120px] rounded-full animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-900/10 blur-[150px] rounded-full animate-pulse delay-700" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-4 md:px-8 relative z-10 w-full max-w-7xl mx-auto">
         {/* Left Side: Content */}
         <div className="order-2 lg:order-1 flex flex-col items-start gap-8">
           <div className="flex flex-col gap-4">
-            <span className="hero-tag px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-bold tracking-[0.3em] w-fit">
+            <span className="hero-tag px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 text-xs font-bold tracking-[0.3em] w-fit">
               WELCOME TO MY PORTFOLIO
             </span>
             <h1 className="hero-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1]">
               Crafting{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
                 Digital
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-red-950">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-950">
                 Masterpieces
               </span>
             </h1>
             <p className="hero-heading text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
               <span
-                className="text-red-500 ml-2 font-bold inline-block min-w-[200px]"
+                className="text-blue-500 ml-2 font-bold inline-block min-w-[200px]"
                 ref={greetingRef}
               >
                 {personalData.greeting[0]}
@@ -195,7 +195,7 @@ const HeroSection = () => {
             <p className="hero-heading text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
               I'm <span className="text-white font-bold">{personalData.name}</span>, a professional
               <span
-                className="text-red-500 ml-2 font-bold inline-block min-w-[200px]"
+                className="text-blue-500 ml-2 font-bold inline-block min-w-[200px]"
                 ref={designationRef}
               >
                 {personalData.designationAlternateWords[0]}
@@ -209,28 +209,28 @@ const HeroSection = () => {
               <Link
                 href={personalData.github}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-blue-500 hover:border-blue-500/50 transition-all duration-300 shadow-xl"
               >
                 <BsGithub size={24} />
               </Link>
               <Link
                 href={personalData.linkedIn}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-blue-500 hover:border-blue-500/50 transition-all duration-300 shadow-xl"
               >
                 <BsLinkedin size={24} />
               </Link>
               <Link
                 href={`mailto:${personalData.email}`}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-blue-500 hover:border-blue-500/50 transition-all duration-300 shadow-xl"
               >
                 <FaRegEnvelope size={24} />
               </Link>
               <Link
                 href={personalData.Instagram}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-blue-500 hover:border-blue-500/50 transition-all duration-300 shadow-xl"
               >
                 <FaInstagram size={24} />
               </Link>
@@ -239,7 +239,7 @@ const HeroSection = () => {
             <div className="hero-cta flex flex-wrap gap-4">
               <Link
                 href="/#contact"
-                className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-red-600 to-red-900 text-white font-bold uppercase tracking-wider overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(239,68,68,0.3)]"
+                className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-900 text-white font-bold uppercase tracking-wider overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(21,93,252,0.3)]"
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                 <span className="relative flex items-center gap-2">
@@ -250,7 +250,7 @@ const HeroSection = () => {
               <button
                 type="button"
                 onClick={onButtonClick}
-                className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
+                className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-blue-500/50 flex items-center gap-2"
               >
                 Get Resume <MdDownload className="group-hover:translate-y-1 transition-transform" />
               </button>
@@ -274,12 +274,12 @@ const HeroSection = () => {
               {/* Card Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/5">
                 <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500" />
-                  <div className="w-3 h-3 rounded-full bg-red-400/50" />
-                  <div className="w-3 h-3 rounded-full bg-red-300/20" />
+                  <div className="w-3 h-3 rounded-full bg-blue-500" />
+                  <div className="w-3 h-3 rounded-full bg-blue-400/50" />
+                  <div className="w-3 h-3 rounded-full bg-blue-300/20" />
                 </div>
                 <div className="text-xs font-mono text-slate-500 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                   Portfolio.ts
                 </div>
               </div>
@@ -289,7 +289,7 @@ const HeroSection = () => {
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">01</span>
                     <p>
-                      <span className="text-red-500">const</span>{" "}
+                      <span className="text-blue-500">const</span>{" "}
                       <span className="text-white">developer</span> = {"{"}
                     </p>
                   </div>
@@ -297,21 +297,21 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">02</span>
                     <p className="ml-4">
                       <span className="text-slate-200">name:</span>{" "}
-                      <span className="text-red-300">'Ansaf Akhtar'</span>,
+                      <span className="text-blue-300">'Ansaf Akhtar'</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">03</span>
                     <p className="ml-4">
                       <span className="text-slate-200">focus:</span>{" "}
-                      <span className="text-red-300">'Fullstack Mastery'</span>,
+                      <span className="text-blue-300">'Fullstack Mastery'</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">04</span>
                     <p className="ml-4">
                       <span className="text-slate-200">skills:</span> [
-                      <span className="text-red-300">
+                      <span className="text-blue-300">
                         'ReactJS', 'JavaScript', 'TypeScript', 'NextJS', 'Node', 'AWS'
                       </span>
                       ],
@@ -321,14 +321,14 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">05</span>
                     <p className="ml-4">
                       <span className="text-slate-200">passionate:</span>{" "}
-                      <span className="text-red-600">true</span>,
+                      <span className="text-blue-600">true</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">06</span>
                     <p className="ml-4">
                       <span className="text-slate-200">motto:</span>{" "}
-                      <span className="text-red-400">"Build with Purpose"</span>
+                      <span className="text-blue-400">"Build with Purpose"</span>
                     </p>
                   </div>
                   <div className="flex gap-4">
@@ -338,7 +338,7 @@ const HeroSection = () => {
                   <div className="flex gap-4 mt-4">
                     <span className="text-slate-600 italic">08</span>
                     <p>
-                      <span className="text-red-500">developer</span>.
+                      <span className="text-blue-500">developer</span>.
                       <span className="text-white">showcase</span>();
                     </p>
                   </div>

@@ -10,7 +10,7 @@ const SkillItem = ({ skill }: { skill: string }) => {
 
   return (
     <div className="mx-4 my-4 group">
-      <div className="relative px-8 py-6 rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-3xl transition-all duration-500 hover:border-red-500/30 hover:bg-white/[0.05] flex items-center gap-4 shadow-xl">
+      <div className="relative px-8 py-6 rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-3xl transition-all duration-500 hover:border-blue-500/30 hover:bg-white/[0.05] flex items-center gap-4 shadow-xl">
         <div
           className="text-3xl transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_var(--icon-color)]"
           style={{ "--icon-color": color } as React.CSSProperties}
@@ -18,7 +18,7 @@ const SkillItem = ({ skill }: { skill: string }) => {
           <Icon style={{ color: color }} />
         </div>
         <div className="flex flex-col">
-          <span className="text-sm font-bold text-white tracking-wide uppercase group-hover:text-red-500 transition-colors">
+          <span className="text-sm font-bold text-white tracking-wide uppercase group-hover:text-blue-500 transition-colors">
             {skill}
           </span>
           <span className="text-[10px] text-slate-500 font-medium uppercase tracking-tighter">
@@ -42,23 +42,23 @@ function Skills() {
   return (
     <div id="skills" className="relative z-50 py-24 lg:py-48 overflow-hidden ">
       {/* Dramatic Background Atmosphere */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-red-950/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-950/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative">
         <div className="flex flex-col items-center mb-16 lg:mb-24">
           <SectionReveal direction="down">
             <div className="flex flex-col items-center gap-4">
-              <div className="flex items-center gap-3 text-red-500">
-                <span className="w-8 h-[1px] bg-red-500/50"></span>
+              <div className="flex items-center gap-3 text-blue-500">
+                <span className="w-8 h-[1px] bg-blue-500/50"></span>
                 <span className="text-xs font-bold uppercase tracking-[0.5em]">
                   Inventory
                 </span>
-                <span className="w-8 h-[1px] bg-red-500/50"></span>
+                <span className="w-8 h-[1px] bg-blue-500/50"></span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter text-center">
                 The{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
                   Tech Stack
                 </span>
               </h2>
