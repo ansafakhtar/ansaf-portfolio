@@ -43,7 +43,7 @@ const Footer = () => (
                   to={item.to}
                   smooth
                   duration={500}
-                  className="text-gray-400 hover:text-red-500 transition-all cursor-pointer font-medium"
+                  className="text-gray-400 hover:text-blue-500 transition-all cursor-pointer font-medium"
                 >
                   {item.label}
                 </ScrollLink>
@@ -61,13 +61,13 @@ const Footer = () => (
             <div className="flex flex-col gap-3">
               <a
                 href={`mailto:${personalData.email}`}
-                className="text-gray-400 hover:text-red-500 transition-all font-medium"
+                className="text-gray-400 hover:text-blue-500 transition-all font-medium"
               >
                 {personalData.email}
               </a>
               <a
                 href={`tel:${personalData.phone}`}
-                className="text-gray-400 hover:text-red-500 transition-all font-medium"
+                className="text-gray-400 hover:text-blue-500 transition-all font-medium"
               >
                 {personalData.phone}
               </a>
@@ -78,28 +78,28 @@ const Footer = () => (
             <Link
               href={personalData.github}
               target="_blank"
-              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+              className="p-2 rounded-lg bg-white/5 hover:bg-blue-500/10 hover:text-blue-500 transition-all border border-white/5"
             >
               <FaGithub size={20} />
             </Link>
             <Link
               href={personalData.linkedIn}
               target="_blank"
-              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+              className="p-2 rounded-lg bg-white/5 hover:bg-blue-500/10 hover:text-blue-500 transition-all border border-white/5"
             >
               <FaLinkedin size={20} />
             </Link>
             <Link
               href={`mailto:${personalData.email}`}
               target="_blank"
-              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+              className="p-2 rounded-lg bg-white/5 hover:bg-blue-500/10 hover:text-blue-500 transition-all border border-white/5"
             >
               <FaRegEnvelope size={20} />
             </Link>
             <Link
               href={personalData.Instagram}
               target="_blank"
-              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+              className="p-2 rounded-lg bg-white/5 hover:bg-blue-500/10 hover:text-blue-500 transition-all border border-white/5"
             >
               <FaInstagram size={20} />
             </Link>
@@ -111,7 +111,7 @@ const Footer = () => (
       <div className="mt-8 pt-4 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
         <p>&copy; {new Date().getFullYear()} Ansaf Akhtar.</p>
         <p className="flex items-center gap-2">
-          Made with <span className="text-red-600 animate-pulse">❤️</span> in India
+          Made with <span className="text-blue-600 animate-pulse">❤️</span> in India
         </p>
       </div>
     </div>
